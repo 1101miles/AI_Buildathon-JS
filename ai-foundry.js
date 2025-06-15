@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 
-dotenv.config();import ModelClient from "@azure-rest/ai-inference";
+dotenv.config();
+import ModelClient from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
   const client = new ModelClient(
   process.env.AZURE_INFERENCE_SDK_ENDPOINT ?? "https://dheng-mbv61twv-eastus2.services.ai.azure.com/models", new AzureKeyCredential(process.env.AZURE_INFERENCE_SDK_KEY ?? "YOUR_KEY_HERE"));
